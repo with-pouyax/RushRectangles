@@ -1,16 +1,18 @@
-# RushRectangles
-## Introduction
-RushRectangles is a C project designed to demonstrate the fundamental capabilities of generating various rectangle patterns in the terminal. This project showcases the use of basic C programming constructs, custom function implementation, and the control of output formatting. The project is structured around the creation of different "rush" functions, each responsible for displaying a unique rectangle pattern based on input dimensions.
+# Terminal rectangle patterns
 
-## Project Structure
-The project consists of the following key components:
+**C exercise** · Five rush variants draw different border styles in a terminal using character output.
 
-#### ft_putchar.c:
-A utility function to output a single character to the terminal.
-#### rush00.c to rush04.c:
-Five different files, each containing a specific rush function implementation to draw unique rectangle patterns.
-#### main.c:
-The main driver code that demonstrates the usage of rush functions.
+## Build and use
 
-## Usage
-To display a rectangle pattern, execute the compiled binary without any arguments. The current main.c file is configured to display a 5x5 pattern using rush00. To test different patterns and sizes, modify main.c to call the desired rush function with specific dimensions.
+```sh
+cc ft_putchar.c rush00.c main.c -o rush
+./rush
+```
+
+The executable uses the example or prompts shown in the source.
+
+## Implementation note
+
+Build one rushNN.c variant at a time because each defines rush(). The included main currently calls rush(5, 5).
+
+Source: [`rush00.c`](rush00.c). [License](LICENSE).
